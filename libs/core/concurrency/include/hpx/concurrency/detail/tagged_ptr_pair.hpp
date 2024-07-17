@@ -1,6 +1,7 @@
 //  Copyright (C) 2008-2011 Tim Blechmann
 //  Copyright (C) 2011      Bryce Lelbach
 //  Copyright (c) 2022-2023 Hartmut Kaiser
+//  Copyright (c) 2024      Jacob Tucker
 //
 //  SPDX-License-Identifier: BSL-1.0
 //  Distributed under the Boost Software License, Version 1.0. (See accompanying

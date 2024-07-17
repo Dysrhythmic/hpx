@@ -5,6 +5,7 @@
 # Copyright (c) 2017 Taeguk Kwon
 # Copyright (c) 2020 Giannis Gonidelis
 # Copyright (c) 2021-2024 Hartmut Kaiser
+# Copyright (c)      2024 Jacob Tucker
 #
 # SPDX-License-Identifier: BSL-1.0
 # Distributed under the Boost Software License, Version 1.0. (See accompanying
