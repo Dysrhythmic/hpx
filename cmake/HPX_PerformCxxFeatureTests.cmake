@@ -36,9 +36,7 @@ function(hpx_perform_cxx_feature_tests)
   )
 
   # Separately check for 128 bit atomics
-  hpx_check_for_cxx11_std_atomic_128bit(
-    DEFINITIONS HPX_HAVE_CXX11_STD_ATOMIC_128BIT
-  )
+  hpx_check_for_cxx11_std_atomic_128bit()
 
   hpx_check_for_cxx11_std_quick_exit(DEFINITIONS HPX_HAVE_CXX11_STD_QUICK_EXIT)
 
