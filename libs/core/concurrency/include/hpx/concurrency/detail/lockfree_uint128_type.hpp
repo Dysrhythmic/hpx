@@ -21,6 +21,7 @@
     std::memory_order memOrder
   )
   {
+    (void)memOrder;
     bool result = false;
     asm
     (
