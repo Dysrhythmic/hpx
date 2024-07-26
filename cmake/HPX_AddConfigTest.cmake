@@ -331,7 +331,8 @@ function(hpx_check_for_cxx11_std_atomic_128bit)
     HPX_WITH_CXX11_ATOMIC_128BIT
     SOURCE cmake/tests/cxx11_std_atomic_128bit.cpp
     LIBRARIES ${HPX_CXX11_STD_ATOMIC_LIBRARIES}
-    FILE DEFINITIONS HPX_HAVE_CXX11_STD_ATOMIC_128BIT
+    FILE
+    DEFINITIONS HPX_HAVE_CXX11_STD_ATOMIC_128BIT
   )
   # Check if lockfree
   if(HPX_WITH_CXX11_ATOMIC_128BIT)
@@ -339,7 +340,8 @@ function(hpx_check_for_cxx11_std_atomic_128bit)
       HPX_WITH_CXX11_ATOMIC_128BIT_LOCKFREE
       SOURCE cmake/tests/cxx11_std_atomic_128bit.cpp
       LIBRARIES ${HPX_CXX11_STD_ATOMIC_LIBRARIES}
-      FILE EXECUTE DEFINITIONS HPX_HAVE_CXX11_STD_ATOMIC_128BIT_LOCKFREE
+      FILE EXECUTE
+      DEFINITIONS HPX_HAVE_CXX11_STD_ATOMIC_128BIT_LOCKFREE
     )
   endif()
   if(NOT MSVC)
@@ -355,7 +357,8 @@ function(hpx_check_for_cxx11_std_atomic_128bit)
         HPX_WITH_CXX11_ATOMIC_128BIT
         SOURCE cmake/tests/cxx11_std_atomic_128bit.cpp
         LIBRARIES ${HPX_CXX11_STD_ATOMIC_LIBRARIES}
-        FILE DEFINITIONS HPX_HAVE_CXX11_STD_ATOMIC_128BIT
+        FILE
+        DEFINITIONS HPX_HAVE_CXX11_STD_ATOMIC_128BIT
       )
       # Check if lockfree
       if(HPX_WITH_CXX11_ATOMIC_128BIT)
@@ -363,7 +366,8 @@ function(hpx_check_for_cxx11_std_atomic_128bit)
           HPX_WITH_CXX11_ATOMIC_128BIT_LOCKFREE
           SOURCE cmake/tests/cxx11_std_atomic_128bit.cpp
           LIBRARIES ${HPX_CXX11_STD_ATOMIC_LIBRARIES}
-          FILE EXECUTE DEFINITIONS HPX_HAVE_CXX11_STD_ATOMIC_128BIT_LOCKFREE
+          FILE EXECUTE
+          DEFINITIONS HPX_HAVE_CXX11_STD_ATOMIC_128BIT_LOCKFREE
         )
       endif()
       if(NOT HPX_WITH_CXX11_ATOMIC_128BIT)
