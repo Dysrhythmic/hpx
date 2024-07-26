@@ -19,7 +19,7 @@
     hpx::lockfree::uint128_type& expected,
     hpx::lockfree::uint128_type desired,
     std::memory_order memOrder
-  )
+  ) noexcept
   {
     (void)memOrder;
     bool result = false;
@@ -47,7 +47,7 @@
     hpx::lockfree::uint128_type& expected,
     hpx::lockfree::uint128_type desired,
     std::memory_order memOrder
-  )
+  ) noexcept
   {
     (void)memOrder;
     bool result = false;
