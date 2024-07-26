@@ -13,22 +13,26 @@
 
 void lockfree_128uint_test()
 {
-  hpx::lockfree::uint128_type x(1, 2);
-  hpx::lockfree::uint128_type y(3, 4);
-  std::atomic<hpx::lockfree::uint128_type> a(x);
-  std::atomic<hpx::lockfree::uint128_type> b(y);
+    hpx::lockfree::uint128_type x(1, 2);
+    hpx::lockfree::uint128_type y(3, 4);
+    std::atomic<hpx::lockfree::uint128_type> a(x);
+    std::atomic<hpx::lockfree::uint128_type> b(y);
 
-  a.is_lock_free() ? std::cout << "is_lock_free() passed" << std::endl : std::cout << "is_lock_free() failed" << std::endl;
+    a.is_lock_free() ? std::cout << "is_lock_free() passed" << std::endl :
+                       std::cout << "is_lock_free() failed" << std::endl;
 
-  hpx::lockfree::uint128_type expected = x;
-  hpx::lockfree::uint128_type desired = y;
-  bool result = a.compare_exchange_weak(expected, desired, std::memory_order_seq_cst);
-  hpx::lockfree::uint128_type received = a.load();
-  (result && (received == desired)) ? std::cout << "compare_exchange_weak() passed" << std::endl : std::cout << "compare_exchange_weak() failed" << std::endl;
+    hpx::lockfree::uint128_type expected = x;
+    hpx::lockfree::uint128_type desired = y;
+    bool result =
+        a.compare_exchange_weak(expected, desired, std::memory_order_seq_cst);
+    hpx::lockfree::uint128_type received = a.load();
+    (result && (received == desired)) ?
+        std::cout << "compare_exchange_weak() passed" << std::endl :
+        std::cout << "compare_exchange_weak() failed" << std::endl;
 }
 
 int main()
 {
-  lockfree_128uint_test();
-  return hpx::util::report_errors();
+    lockfree_128uint_test();
+    return hpx::util::report_errors();
 }

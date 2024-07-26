@@ -13,8 +13,8 @@
 #pragma once
 
 #include <hpx/config.hpp>
-#include <hpx/type_support/bit_cast.hpp>
 #include <hpx/concurrency/detail/lockfree_uint128_type.hpp>
+#include <hpx/type_support/bit_cast.hpp>
 
 #include <cstddef>    // for std::size_t
 #include <cstdint>
